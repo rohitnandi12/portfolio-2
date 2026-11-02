@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects Catalogue — Rohit Nandi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="projects.css" />
+</head>
+
+<body class="catalogue-page">
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Rohit<span>.dev</span></a>
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-item">Home</a>
+        <a href="index.html#projects" class="nav-item">Featured</a>
+        <a href="index.html#skills" class="nav-item">Skills</a>
+        <a href="index.html#experience" class="nav-item">Experience</a>
+        <a href="mailto:rohitnandi12@gmail.com" class="btn-touch-nav">
+          <span>Get in touch</span>
+          <span class="btn-arrow-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="catalogue-wrapper">
+    <!-- Header / Banner Area -->
+    <div class="catalogue-header">
+      <div class="catalogue-title-group">
+        <a href="index.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Main Portfolio
+        </a>
+        <span class="section-tag">Engineering Showcase</span>
+        <h1 class="catalogue-title">Systems & Architecture Catalogue</h1>
+        <p class="catalogue-desc">
+          Browse production distributed services, event-driven pipelines, cloud platform migrations, and applied machine learning architectures.
+        </p>
+      </div>
+
+      <!-- Top Search Bar -->
+      <div class="search-bar-container">
+        <div class="search-input-wrapper">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="project-search" placeholder="Search by project name, tech (Java, Kafka, AWS, ML), or client..." autocomplete="off" />
+          <button id="clear-search" class="clear-btn" title="Clear search" style="display: none;">✕</button>
+        </div>
+        <div class="search-meta">
+          <span id="results-count">Showing <strong>8</strong> of 8 projects</span>
+          <button id="mobile-filter-toggle" class="btn-filter-toggle">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+            Filter Options
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Catalogue Main Layout: Left Filters + Right Image Gallery -->
+    <div class="catalogue-layout">
+      <!-- Left Sidebar: Filters -->
+      <aside class="catalogue-sidebar" id="filter-sidebar">
+        <div class="sidebar-header">
+          <h3>Filter Projects</h3>
+          <button id="reset-filters" class="btn-reset">Reset</button>
+        </div>
+
+        <!-- Filter Group 1: Category -->
+        <div class="filter-group">
+          <h4 class="filter-group-title">Domain & Category</h4>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="category" value="all" checked id="cat-all" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">All Categories</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="category" value="backend" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Backend & Microservices</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="category" value="fintech" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Fintech & Payments</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="category" value="cloud" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Cloud & Observability</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="category" value="ml" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Machine Learning & AI</span>
+          </label>
+        </div>
+
+        <!-- Filter Group 2: Technologies -->
+        <div class="filter-group">
+          <h4 class="filter-group-title">Core Technology</h4>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="tech" value="java" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Java 21 / Virtual Threads</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="tech" value="kafka" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Apache Kafka</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="tech" value="aws" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">AWS & Apache Iceberg</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="tech" value="database" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">PostgreSQL / Redis</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="tech" value="python" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Python & PyTorch</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="tech" value="observability" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Alloy / Prometheus</span>
+          </label>
+        </div>
+
+        <!-- Filter Group 3: Scale & Architecture -->
+        <div class="filter-group">
+          <h4 class="filter-group-title">Architecture Highlights</h4>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="scale" value="highscale" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">High Concurrency (90k+ rps)</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="scale" value="migration" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Platform Migration</span>
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="scale" value="lead" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">Team Leadership (Scrum PO)</span>
+          </label>
+        </div>
+      </aside>
+
+      <!-- Right Main: Image Cards Catalogue Grid -->
+      <section class="catalogue-content">
+        <div class="catalogue-grid" id="catalogue-grid">
+          
+          <!-- Card 1 -->
+          <article class="catalogue-card" data-category="fintech backend" data-tech="java database" data-scale="highscale" data-id="fintech">
+            <div class="card-thumb">
+              <img src="./assets/project-fintech.png" alt="Digital Gold Fintech Platform" loading="lazy" />
+              <span class="card-pill fintech">Fintech / Payments</span>
+            </div>
+            <div class="card-details">
+              <div class="card-client">Muthoot FinCorp. One</div>
+              <h3 class="card-title">Digital Gold & Payments Platform</h3>
+              <p class="card-desc">Architected gifting & physical gold e-commerce with Cashfree integration, cutting database latency by 80% and mitigating IDOR/SQLi vulnerabilities.</p>
+              <div class="card-tags">
+                <span>Java 21</span>
+                <span>Cashfree</span>
+                <span>Postgres</span>
+                <span>REST APIs</span>
+                <span>Spring Boot</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="catalogue-card" data-category="backend cloud" data-tech="kafka database" data-scale="highscale" data-id="kafka">
+            <div class="card-thumb">
+              <img src="./assets/project-kafka.png" alt="Real-Time Event Streamer" loading="lazy" />
+              <span class="card-pill backend">Streaming / 90k+ rps</span>
+            </div>
+            <div class="card-details">
+              <div class="card-client">Target Corporation India</div>
+              <h3 class="card-title">Real-Time Event Streaming Pipeline</h3>
+              <p class="card-desc">High-concurrency Kafka microservices pipeline processing live events into PostgreSQL under peak retail loads exceeding 90,000 requests per second.</p>
+              <div class="card-tags">
+                <span>Apache Kafka</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
+                <span>Event-Driven</span>
+                <span>24/7 Uptime</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="catalogue-card" data-category="cloud backend" data-tech="java observability" data-scale="migration lead" data-id="java21">
+            <div class="card-thumb">
+              <img src="./assets/project-java21.png" alt="Core Platform Java 21 Migration" loading="lazy" />
+              <span class="card-pill cloud">Platform / Observability</span>
+            </div>
+            <div class="card-details">
+              <div class="card-client">Trading Technologies</div>
+              <h3 class="card-title">Core Platform Modernization & Alloy</h3>
+              <p class="card-desc">Led complete migration from Java 8/Tomcat 9 to Java 21/Tomcat 10 on Amazon Linux 2023. Deployed Alloy sidecar observability mesh across 7 microservices.</p>
+              <div class="card-tags">
+                <span>Java 21</span>
+                <span>Tomcat 10</span>
+                <span>Alloy Sidecar</span>
+                <span>CI/CD</span>
+                <span>Scrum PO</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="catalogue-card" data-category="ml" data-tech="python" data-scale="highscale" data-id="ml">
+            <div class="card-thumb">
+              <img src="./assets/project-ml.png" alt="Neural Network & Lead Scoring Engine" loading="lazy" />
+              <span class="card-pill ml">Machine Learning / AI</span>
+            </div>
+            <div class="card-details">
+              <div class="card-client">Decisive.ai & Esellas</div>
+              <h3 class="card-title">Neural Network & Lead Scoring Engine</h3>
+              <p class="card-desc">Distributed ML architecture with Akka message streaming, clustering algorithms, and real-time training telemetry boosting lead conversions by 60%.</p>
+              <div class="card-tags">
+                <span>PyTorch</span>
+                <span>Python</span>
+                <span>Akka Streams</span>
+                <span>Clustering</span>
+                <span>Telemetry</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="catalogue-card" data-category="cloud backend" data-tech="java aws" data-scale="lead" data-id="iceberg">
+            <div class="card-thumb">
+              <img src="./assets/project-iceberg.png" alt="AWS Glue & Apache Iceberg Lake" loading="lazy" />
+              <span class="card-pill cloud">Data Lake / 99% Speedup</span>
+            </div>
+            <div class="card-details">
+              <div class="card-client">Zensar Technologies</div>
+              <h3 class="card-title">AWS Glue & Apache Iceberg Lake Ingestion</h3>
+              <p class="card-desc">Ingested data from Iceberg tables via AWS Glue; slashed batch runtimes by >99% (4 days to <1 hr) via Java 21 virtual threads while leading a team of 6.</p>
+              <div class="card-tags">
+                <span>Java 21 Virtual Threads</span>
+                <span>AWS Glue</span>
+                <span>Apache Iceberg</span>
+                <span>Spring Cloud</span>
+                <span>Team Lead</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="catalogue-card" data-category="cloud backend" data-tech="observability" data-scale="migration" data-id="observability">
+            <div class="card-thumb">
+              <img src="./assets/project-observability.png" alt="Unified Sidecar Observability Mesh" loading="lazy" />
+              <span class="card-pill cloud">Observability & Metrics</span>
+            </div>
+            <div class="card-details">
+              <div class="card-client">Distributed Architecture</div>
+              <h3 class="card-title">Unified Sidecar Observability Mesh</h3>
+              <p class="card-desc">Architected and deployed Alloy as a sidecar service across 7 critical microservices, establishing centralized metrics tracking, Prometheus scraping, and Grafana alerting.</p>
+              <div class="card-tags">
+                <span>Alloy</span>
+                <span>Prometheus</span>
+                <span>Grafana</span>
+                <span>Sidecar Pattern</span>
+                <span>Distributed Tracing</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="catalogue-card" data-category="fintech backend" data-tech="java database" data-scale="highscale" data-id="ecommerce">
+            <div class="card-thumb">
+              <img src="./assets/project-ecommerce.png" alt="Gold Gifting & Commerce API Engine" loading="lazy" />
+              <span class="card-pill fintech">Fintech / E-Commerce</span>
+            </div>
+            <div class="card-details">
+              <div class="card-client">Muthoot FinCorp. One</div>
+              <h3 class="card-title">Gold Gifting & Commerce API Engine</h3>
+              <p class="card-desc">Designed REST APIs, webhooks, and asynchronous schedulers for gifting and physical gold purchases, increasing customer gold transactions by 25%.</p>
+              <div class="card-tags">
+                <span>REST APIs</span>
+                <span>Webhooks</span>
+                <span>Schedulers</span>
+                <span>Redis</span>
+                <span>Microservices</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="catalogue-card" data-category="backend" data-tech="java database" data-scale="migration" data-id="drive">
+            <div class="card-thumb">
+              <img src="./assets/project-drive.png" alt="Enterprise Drive Dashboard" loading="lazy" />
+              <span class="card-pill backend">Enterprise Architecture</span>
+            </div>
+            <div class="card-details">
+              <div class="card-client">Aptean & Infosys</div>
+              <h3 class="card-title">Enterprise Drive Dashboard & Optimization</h3>
+              <p class="card-desc">Redesigned file dashboard with Google Drive-inspired UI, refactored legacy JEE to Spring/Hibernate, and accelerated Jasper Reports generation by 90%.</p>
+              <div class="card-tags">
+                <span>Spring</span>
+                <span>Hibernate</span>
+                <span>MVC Architecture</span>
+                <span>Jasper Reports</span>
+                <span>TDD</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty State Container when no projects match -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <div class="empty-icon">🔍</div>
+          <h3>No matching projects found</h3>
+          <p>Try adjusting your search query or unchecking some filter options.</p>
+          <button id="reset-empty-btn" class="btn-touch-orange">Reset All Filters</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal / Lightbox for Full Project Inspection -->
+  <div class="project-modal" id="project-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-media">
+        <img id="modal-img" src="" alt="Project Preview" />
+      </div>
+      <div class="modal-body">
+        <span class="modal-client" id="modal-client"></span>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-desc" id="modal-desc"></p>
+        <div class="modal-tags" id="modal-tags"></div>
+        <div class="modal-actions">
+          <a href="mailto:rohitnandi12@gmail.com?subject=Inquiry%20regarding%20Architecture" class="btn-touch-orange">Discuss Architecture With Rohit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="catalogue-footer">
+    <p>© 2026 Rohit Nandi — Systems & Engineering Catalogue. <a href="index.html">Return to Main Portfolio</a></p>
+  </footer>
+
+  <script src="projects.js"></script>
+</body>
+
+</html>
+
