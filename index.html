@@ -25,7 +25,7 @@
       <a href="#home" class="logo">Rohit<span>.dev</span></a>
       <nav class="nav-links">
         <a href="#skills" class="nav-item">Skills</a>
-        <a href="#projects" class="nav-item">Projects</a>
+        <!-- <a href="#projects" class="nav-item">Projects</a> -->
         <a href="#experience" class="nav-item">Experience</a>
         <a href="#education" class="nav-item">Education</a>
         <a href="projects.html" class="nav-item nav-pill-link">Projects ↗</a>
@@ -74,11 +74,11 @@
         </div>
         <div class="service-item">
           <span class="service-number">#03</span>
-          <span class="service-name">High Scale (90k+ req/sec)</span>
+          <span class="service-name">Microservices / Distributed Systems / Big Data</span>
         </div>
         <div class="service-item">
           <span class="service-number">#04</span>
-          <span class="service-name">Distributed Systems & AI</span>
+          <span class="service-name">AI / GenAI / Machine Learning</span>
         </div>
       </div>
 
@@ -98,15 +98,9 @@
             </div>
             <div class="brand-item">
               <svg class="brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2.5">
-                <circle cx="12" cy="12" r="9"></circle>
-                <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
-              </svg>
-              <span>Target</span>
-            </div>
-            <div class="brand-item">
-              <svg class="brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="4,3 20,3 12,12 20,21 4,21 12,12" />
+                stroke-width="2.2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
               <span>Zensar</span>
             </div>
@@ -118,6 +112,14 @@
               <span>Muthoot FinCorp</span>
             </div>
             <div class="brand-item">
+              <svg class="brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <circle cx="12" cy="12" r="9"></circle>
+                <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+              </svg>
+              <span>Target</span>
+            </div>
+            <div class="brand-item">
               <svg class="brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M6 7V5a2 2 0 012-2h8a2 2 0 012 2v2h2a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2h2zm2-2v2h8V5H8z" />
@@ -125,12 +127,26 @@
               <span>Freelancing</span>
             </div>
             <div class="brand-item">
-              <svg class="brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <svg class="brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path
-                  d="M6 7V5a2 2 0 012-2h8a2 2 0 012 2v2h2a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2h2zm2-2v2h8V5H8z" />
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                </path>
+                <circle cx="12" cy="12" r="4"></circle>
               </svg>
               <span>Decisive.ai</span>
             </div>
+
+            <div class="brand-item">
+              <svg class="brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                <path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"></path>
+              </svg>
+              <span>Aptean</span>
+            </div>
+
             <div class="brand-item">
               <svg class="brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.2">
@@ -426,19 +442,37 @@
               </div>
               <span class="timeline-period">Dec 2024 — Oct 2026</span>
             </div>
+
             <ul class="timeline-bullets">
-              <li>Modernized core data service platform from Java 8/Tomcat 9 to Java 21/Tomcat 10; resolved complex JVM
-                conflicts and ensured full Amazon Linux 2023 container OS compatibility.</li>
-              <li>Eliminated critical security debt and optimized nested POM structures, refactoring CI/CD pipelines to
-                save each engineer ~1 day of overhead.</li>
-              <li>Architected and deployed Alloy as a sidecar service across 7 critical microservices, establishing
-                centralized, low-overhead observability.</li>
+              <li>Led end-to-end modernization of the core PDS platform from Java 8/Tomcat 9 to Java 21/Tomcat 10,
+                resolving complex JVM, Jakarta EE, dependency, and runtime compatibility issues for Amazon Linux 2023.
+              </li>
+              <li>Modernized build infrastructure by upgrading vulnerable dependencies, optimizing Maven POMs,
+                introducing Maven Toolchains, and revamping GitHub Actions CI/CD workflows; integrated automated tests
+                across PDS, HDS, and AlgoStore.</li>
+              <li>Deployed Alloy sidecars across 7 critical microservices, establishing centralized observability; built
+                a Python-Grafana performance testing framework to analyze request throughput, error rates, and
+                p50–p99.99 latency.</li>
+              <li>Modernized Filebeat and Microbeat integrations for Tomcat 8/10 compatibility and migrated legacy
+                infrastructure from RHEL 7 to RHEL 9, addressing OS end-of-life risks.</li>
+              <li>Contributed to cross-application SRE and production reliability initiatives, providing
+                PagerDuty/on-call support across 10+ PDS modules and approximately 10 DAIS applications.</li>
+              <li>Unblocked critical cross-team deliveries by implementing enhancements and resolving production
+                blockers across FNO, Tick Tables, PMerges, and S2F products.</li>
             </ul>
+
             <div class="timeline-tags">
               <span class="timeline-tag">Java 21</span>
+              <span class="timeline-tag">Spring / JVM</span>
               <span class="timeline-tag">Tomcat 10</span>
-              <span class="timeline-tag">Alloy Sidecar</span>
-              <span class="timeline-tag">CI/CD</span>
+              <span class="timeline-tag">AWS / Amazon Linux</span>
+              <span class="timeline-tag">Apache Maven</span>
+              <span class="timeline-tag">GitHub Actions</span>
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">Grafana</span>
+              <span class="timeline-tag">Alloy</span>
+              <span class="timeline-tag">SRE</span>
+              <span class="timeline-tag">RHEL 9</span>
               <span class="timeline-tag">Scrum PO</span>
             </div>
           </div>
@@ -457,19 +491,30 @@
               </div>
               <span class="timeline-period">Feb 2024 — June 2024</span>
             </div>
+
             <ul class="timeline-bullets">
-              <li>Reduced batch processing duration by over 99% (from 4 days down to under 1 hour) by leveraging Java 21
-                virtual threads.</li>
-              <li>Engineered high-throughput service ingesting from Iceberg tables via AWS Glue catalog; authored 40+
-                REST APIs with 90% JUnit coverage.</li>
-              <li>Mentored and led an engineering team of 6 across system architecture, sprint planning, and code
-                reviews.</li>
+              <li>Reduced batch processing time by over 99% (4 days to under 1 hour) by leveraging Java 21 virtual
+                threads for concurrent data processing.</li>
+              <li>Engineered a high-throughput data ingestion service integrating Apache Iceberg tables with AWS Glue
+                Data Catalog.</li>
+              <li>Designed and developed 40+ REST APIs with 90% JUnit test coverage, ensuring reliable and maintainable
+                service integrations.</li>
+              <li>Implemented Spring Cloud Service Registry, Service Discovery, and Config Server, enabling dynamic
+                service communication and flexible configuration management.</li>
+              <li>Led and mentored a team of 6 engineers, overseeing system architecture, modular codebase refactoring,
+                sprint planning, and code reviews.</li>
             </ul>
+
             <div class="timeline-tags">
-              <span class="timeline-tag">Java 21 Virtual Threads</span>
+              <span class="timeline-tag">Java 21</span>
+              <span class="timeline-tag">Virtual Threads</span>
+              <span class="timeline-tag">Spring Boot</span>
               <span class="timeline-tag">Spring Cloud</span>
-              <span class="timeline-tag">AWS Glue & Iceberg</span>
-              <span class="timeline-tag">Team Lead</span>
+              <span class="timeline-tag">AWS Glue</span>
+              <span class="timeline-tag">Apache Iceberg</span>
+              <span class="timeline-tag">REST APIs</span>
+              <span class="timeline-tag">JUnit</span>
+              <span class="timeline-tag">Team Leadership</span>
             </div>
           </div>
         </div>
@@ -487,19 +532,32 @@
               </div>
               <span class="timeline-period">May 2023 — Feb 2024</span>
             </div>
+
             <ul class="timeline-bullets">
-              <li>Led the Digital Gold backend team; developed REST APIs, webhooks, and schedulers for gifting and
-                physical gold e-commerce, driving 25% transaction growth.</li>
-              <li>Integrated Cashfree multi-gateway payments and optimized database schema, reducing Buy/Sell API
-                latency by 80%.</li>
-              <li>Fortified application security against IDOR, SQLi, and XSS vulnerabilities via robust authorization
-                and input validation layers.</li>
+              <li>Led the Digital Gold backend team, driving product enhancements and new features that increased user
+                engagement by 30%.</li>
+              <li>Designed REST APIs, webhooks, and schedulers for the Gold Gifting feature, increasing platform gold
+                transactions by 25%.</li>
+              <li>Redesigned the coupon engine to support extensible messaging and marketing campaigns, increasing
+                coupon redemption rates by 40%.</li>
+              <li>Designed and developed a physical gold e-commerce platform, expanding product offerings and
+                contributing to a 20% revenue increase; integrated Cashfree multi-gateway payments, improving
+                transaction completion rates by 15%.</li>
+              <li>Optimized Buy/Sell API performance through database schema redesign, reducing latency by 80%, and
+                strengthened application security against IDOR, SQLi, and XSS through robust authorization and input
+                validation.</li>
             </ul>
+
             <div class="timeline-tags">
               <span class="timeline-tag">Digital Gold</span>
-              <span class="timeline-tag">Fintech Payments</span>
-              <span class="timeline-tag">Database Tuning</span>
-              <span class="timeline-tag">Security (IDOR/SQLi)</span>
+              <span class="timeline-tag">Java</span>
+              <span class="timeline-tag">Spring Boot</span>
+              <span class="timeline-tag">REST APIs</span>
+              <span class="timeline-tag">Webhooks</span>
+              <span class="timeline-tag">Cashfree Payments</span>
+              <span class="timeline-tag">E-Commerce</span>
+              <span class="timeline-tag">Database Optimization</span>
+              <span class="timeline-tag">Application Security</span>
             </div>
           </div>
         </div>
@@ -512,27 +570,41 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <div class="timeline-role-group">
-                <h3 class="timeline-company">Target Corporation India <span class="tag-contract">Contract</span></h3>
+                <h3 class="timeline-company">Target Corporation India
+                  <span class="tag-contract">Contract</span>
+                </h3>
                 <span class="timeline-role">Backend Development Engineer</span>
               </div>
               <span class="timeline-period">Sept 2022 — May 2023</span>
             </div>
+
             <ul class="timeline-bullets">
-              <li>Engineered Kafka event-driven pipelines transitioning legacy batch workflows to real-time streaming
-                into PostgreSQL.</li>
-              <li>Ensured flawless 24/7 system availability and zero downtime during peak retail traffic exceeding
-                90,000 requests per second.</li>
+              <li>Engineered Kafka-driven microservices to consume, process, and persist high-volume event streams into
+                PostgreSQL, implementing business logic for real-time data processing.</li>
+              <li>Led the migration from legacy batch updates to event-driven Kafka pipelines, improving data freshness
+                and enabling real-time processing.</li>
+              <li>Developed event re-publishing APIs to recover lost Kafka events, strengthening data integrity and
+                simplifying operational recovery.</li>
+              <li>Ensured 24/7 production reliability through system monitoring and peak-season support under traffic
+                exceeding 90,000 requests per second; streamlined service deployments using Docker Compose.</li>
             </ul>
+
             <div class="timeline-tags">
+              <span class="timeline-tag">Java</span>
+              <span class="timeline-tag">Spring Boot</span>
               <span class="timeline-tag">Apache Kafka</span>
               <span class="timeline-tag">PostgreSQL</span>
-              <span class="timeline-tag">90k+ Req/sec</span>
-              <span class="timeline-tag">Event-Driven</span>
+              <span class="timeline-tag">Microservices</span>
+              <span class="timeline-tag">Event-Driven Architecture</span>
+              <span class="timeline-tag">Docker Compose</span>
+              <span class="timeline-tag">90K+ Requests/Sec</span>
+              <span class="timeline-tag">Production Support</span>
             </div>
           </div>
         </div>
 
-        <!-- Timeline Item 5 -->
+
+        <!-- Timeline Item 5: Esellas -->
         <div class="timeline-item">
           <div class="timeline-marker">
             <span class="timeline-dot"></span>
@@ -540,27 +612,77 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <div class="timeline-role-group">
-                <h3 class="timeline-company">Decisive.ai & Esellas</h3>
-                <span class="timeline-role">AI Programmer & Prototype Developer</span>
+                <h3 class="timeline-company">Esellas <span class="tag-contract">Contract</span></h3>
+                <span class="timeline-role">Prototype Developer</span>
               </div>
-              <span class="timeline-period">Dec 2017 — July 2022</span>
+              <span class="timeline-period">Nov 2021 — July 2022</span>
             </div>
+
             <ul class="timeline-bullets">
-              <li>Built distributed microservices for data generation, learning, and validation with Akka message
-                streaming.</li>
-              <li>Trained machine learning models (clustering, neural networks, and regression) boosting lead
-                conversions by 60% and cutting data aggregation times by 50%.</li>
+              <li>Developed a machine learning-based clustering model to categorize articles retrieved through
+                third-party APIs, improving information retrieval and research discovery.</li>
+              <li>Built a regression model to predict lead conversion scores, demonstrating the potential for a 60%
+                increase in data-driven lead conversions.</li>
+              <li>Designed automated data aggregation pipelines integrating third-party APIs, reducing manual data
+                collection time by 50% and freeing research teams to focus on high-value activities.</li>
+              <li>Developed an internal knowledge repository and ticketing platform to streamline research data
+                management, task assignment, progress tracking, and team collaboration.</li>
             </ul>
+
             <div class="timeline-tags">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">Machine Learning</span>
+              <span class="timeline-tag">Clustering Models</span>
+              <span class="timeline-tag">Regression Models</span>
+              <span class="timeline-tag">Information Retrieval</span>
+              <span class="timeline-tag">Predictive Analytics</span>
+              <span class="timeline-tag">Data Pipelines</span>
+              <span class="timeline-tag">REST APIs</span>
+              <span class="timeline-tag">Workflow Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5: Decisive.ai -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-role-group">
+                <h3 class="timeline-company">Decisive.ai</h3>
+                <span class="timeline-role">Principal AI Programmer</span>
+              </div>
+              <span class="timeline-period">Dec 2017 — Nov 2021</span>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Architected distributed microservices for data generation, neural network learning, and validation,
+                enabling independent scaling and asynchronous communication through Akka message streaming.</li>
+              <li>Researched and implemented machine learning algorithms from research papers, conducting neural network
+                modeling, hyperparameter tuning, experimentation, and performance analysis.</li>
+              <li>Developed custom adapters and game engines to integrate with the Learning Platform, enabling
+                consistent and reliable training data generation.</li>
+              <li>Built interactive training dashboards with real-time performance graphs, enabling continuous model
+                monitoring, early issue detection, and data-driven optimization.</li>
+            </ul>
+
+            <div class="timeline-tags">
+              <span class="timeline-tag">Scala</span>
               <span class="timeline-tag">Akka Streams</span>
+              <span class="timeline-tag">Microservices</span>
               <span class="timeline-tag">Machine Learning</span>
               <span class="timeline-tag">Neural Networks</span>
-              <span class="timeline-tag">Data Pipelines</span>
+              <span class="timeline-tag">Hyperparameter Tuning</span>
+              <span class="timeline-tag">Model Training</span>
+              <span class="timeline-tag">Data Generation</span>
+              <span class="timeline-tag">Real-Time Monitoring</span>
             </div>
           </div>
         </div>
 
-        <!-- Timeline Item 6 -->
+        <!-- Timeline Item 7: Aptean -->
         <div class="timeline-item">
           <div class="timeline-marker">
             <span class="timeline-dot"></span>
@@ -568,21 +690,67 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <div class="timeline-role-group">
-                <h3 class="timeline-company">Aptean & Infosys Ltd.</h3>
-                <span class="timeline-role">Development & System Engineer</span>
+                <h3 class="timeline-company">Aptean</h3>
+                <span class="timeline-role">Engineer, Development</span>
               </div>
-              <span class="timeline-period">July 2015 — Nov 2017</span>
+              <span class="timeline-period">Jan 2017 — Nov 2017</span>
             </div>
+
             <ul class="timeline-bullets">
-              <li>Redesigned enterprise file dashboard inspired by Google Drive; migrated legacy JDBC/JSP stacks to
-                Spring & Hibernate.</li>
-              <li>Optimized Jasper Reports generation code to reduce runtime by 90%; recognized as Top Performer Trainee
-                (93% aggregate) at Infosys Mysore.</li>
+              <li>Redesigned the Files Dashboard with a streamlined, Google Drive-inspired interface, improving
+                usability and file management workflows.</li>
+              <li>Optimized client-server file handling and interaction workflows to support efficient processing of
+                large files.</li>
+              <li>Refactored application components into MVC architecture, improving code maintainability, modularity,
+                and separation of concerns.</li>
+              <li>Implemented a structured unit-testing framework and promoted Test-Driven Development (TDD) to improve
+                code quality and reduce regressions.</li>
             </ul>
+
             <div class="timeline-tags">
-              <span class="timeline-tag">Spring / Hibernate</span>
+              <span class="timeline-tag">Java</span>
+              <span class="timeline-tag">MVC Architecture</span>
+              <span class="timeline-tag">JEE</span>
+              <span class="timeline-tag">REST APIs</span>
+              <span class="timeline-tag">JUnit</span>
               <span class="timeline-tag">TDD</span>
-              <span class="timeline-tag">Infosys Top Performer</span>
+              <span class="timeline-tag">File Management</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 8: Infosys -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-role-group">
+                <h3 class="timeline-company">Infosys Ltd.</h3>
+                <span class="timeline-role">System Engineer</span>
+              </div>
+              <span class="timeline-period">July 2015 — Nov 2016</span>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Modernized legacy enterprise applications by migrating from JDBC, JSP, and JEE to Spring and
+                Hibernate-based architecture, improving maintainability and application efficiency.</li>
+              <li>Implemented business requirements and resolved 95% of reported defects, improving application
+                stability and feature functionality.</li>
+              <li>Optimized JasperReports generation workflows, reducing report generation time by 90% through code and
+                performance improvements.</li>
+            </ul>
+
+            <div class="timeline-tags">
+              <span class="timeline-tag">Java</span>
+              <span class="timeline-tag">Spring Framework</span>
+              <span class="timeline-tag">Hibernate</span>
+              <span class="timeline-tag">JDBC</span>
+              <span class="timeline-tag">JSP</span>
+              <span class="timeline-tag">JEE</span>
+              <span class="timeline-tag">JasperReports</span>
+              <span class="timeline-tag">Performance Optimization</span>
             </div>
           </div>
         </div>
