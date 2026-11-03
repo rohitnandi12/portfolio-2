@@ -1,7 +1,9 @@
 /* ==========================================================================
    RESET & FOUNDATIONS
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -65,7 +67,7 @@ body {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 50% 40%, rgba(10, 10, 12, 0.05) 0%, rgba(10, 10, 12, 0.65) 100%),
-              linear-gradient(180deg, rgba(10, 10, 12, 0.35) 0%, rgba(10, 10, 12, 0.05) 30%, rgba(10, 10, 12, 0.4) 70%, rgba(10, 10, 12, 0.92) 100%);
+    linear-gradient(180deg, rgba(10, 10, 12, 0.35) 0%, rgba(10, 10, 12, 0.05) 30%, rgba(10, 10, 12, 0.4) 70%, rgba(10, 10, 12, 0.92) 100%);
   pointer-events: none;
 }
 
@@ -119,6 +121,7 @@ body {
     transform: translateY(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -320,10 +323,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 7rem; /* Clearance for top fixed navbar */
+  padding-top: 7rem;
+  /* Clearance for top fixed navbar */
   padding-bottom: 2.5rem;
-  padding-left: 0.25rem;  /* Minimal left padding */
-  padding-right: 0.25rem; /* Minimal right padding */
+  padding-left: 0.25rem;
+  /* Minimal left padding */
+  padding-right: 0.25rem;
+  /* Minimal right padding */
   width: 100%;
 }
 
@@ -681,17 +687,17 @@ body {
   white-space: nowrap;
   position: relative;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              background 0.3s ease,
-              border-color 0.3s ease,
-              color 0.25s ease,
-              text-shadow 0.35s ease;
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.25s ease,
+    text-shadow 0.35s ease;
   will-change: transform, box-shadow;
 }
 
 /* Tier Sizing */
 .cloud-word.tier-1 {
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  font-size: clamp(1.05rem, 1.75vw, 1.61rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   padding: 0.85rem 1.85rem;
@@ -701,14 +707,14 @@ body {
 }
 
 .cloud-word.tier-2 {
-  font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+  font-size: clamp(0.805rem, 1.26vw, 1.085rem);
   font-weight: 700;
   padding: 0.65rem 1.4rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .cloud-word.tier-3 {
-  font-size: clamp(0.92rem, 1.25vw, 1.15rem);
+  font-size: clamp(0.644rem, 0.875vw, 0.805rem);
   font-weight: 600;
   padding: 0.5rem 1.15rem;
   color: rgba(255, 255, 255, 0.72);
@@ -723,12 +729,35 @@ body {
 }
 
 /* Color Accent Variations for variety */
-.cloud-word.accent-orange { border-color: rgba(255, 87, 34, 0.3); color: #ffab91; }
-.cloud-word.accent-cyan   { border-color: rgba(0, 229, 255, 0.3); color: #80deea; }
-.cloud-word.accent-purple { border-color: rgba(179, 136, 255, 0.3); color: #d1c4e9; }
-.cloud-word.accent-blue   { border-color: rgba(68, 138, 255, 0.3); color: #90caf9; }
-.cloud-word.accent-amber  { border-color: rgba(255, 179, 0, 0.3); color: #ffe082; }
-.cloud-word.accent-green  { border-color: rgba(0, 230, 118, 0.3); color: #a5d6a7; }
+.cloud-word.accent-orange {
+  border-color: rgba(255, 87, 34, 0.3);
+  color: #ffab91;
+}
+
+.cloud-word.accent-cyan {
+  border-color: rgba(0, 229, 255, 0.3);
+  color: #80deea;
+}
+
+.cloud-word.accent-purple {
+  border-color: rgba(179, 136, 255, 0.3);
+  color: #d1c4e9;
+}
+
+.cloud-word.accent-blue {
+  border-color: rgba(68, 138, 255, 0.3);
+  color: #90caf9;
+}
+
+.cloud-word.accent-amber {
+  border-color: rgba(255, 179, 0, 0.3);
+  color: #ffe082;
+}
+
+.cloud-word.accent-green {
+  border-color: rgba(0, 230, 118, 0.3);
+  color: #a5d6a7;
+}
 
 /* When an individual word is hovered: GROWS IN SIZE & RADIATES A VIBRANT GLOW */
 .cloud-word:hover {
@@ -738,8 +767,8 @@ body {
   border-color: #ff5722 !important;
   color: #ffffff !important;
   box-shadow: 0 0 30px rgba(255, 87, 34, 0.8),
-              0 0 60px rgba(255, 87, 34, 0.4),
-              inset 0 0 15px rgba(255, 87, 34, 0.3) !important;
+    0 0 60px rgba(255, 87, 34, 0.4),
+    inset 0 0 15px rgba(255, 87, 34, 0.3) !important;
   text-shadow: 0 0 14px #ff5722, 0 0 28px rgba(255, 87, 34, 0.9) !important;
 }
 
@@ -1107,13 +1136,14 @@ body {
    MOBILE & TABLET VIEWPORT FRIENDLINESS
    ========================================================================== */
 @media (max-width: 1024px) {
+
   .hero-main,
   .section-header,
   .cta-card {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .hero-right,
   .section-header-right {
     align-items: flex-start;
