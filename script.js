@@ -274,3 +274,21 @@ document.addEventListener('click', (e) => {
     }
   }
 });
+
+// Scroll‑to‑top button functionality
+const scrollTopBtn = document.getElementById('scroll-top');
+if (scrollTopBtn) {
+  // Show button after scrolling down 200px
+  const toggleScrollTop = () => {
+    if (window.scrollY > 200) {
+      scrollTopBtn.style.display = 'flex';
+    } else {
+      scrollTopBtn.style.display = 'none';
+    }
+  };
+  window.addEventListener('scroll', toggleScrollTop);
+  // Click scrolls smoothly to top
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
