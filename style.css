@@ -1350,3 +1350,18 @@ body {
     margin-bottom: 1rem;
   }
 }
+
+/* Hide toggle and close buttons on larger screens */
+.nav-toggle,
+.nav-close {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-close {
+    display: block;
+  }
+}
