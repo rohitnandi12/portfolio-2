@@ -194,6 +194,28 @@ body {
   padding: 0.45rem 0.5rem 0.45rem 1.2rem;
   border-radius: 100px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  /* keep on one line */
+  overflow: hidden;
+  /* hide overflow */
+  text-overflow: ellipsis;
+  /* add ... if too long */
+  max-width: 12rem;
+  /* limit width */
+
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #ffffff;
+  color: #111111;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.45rem 0.5rem 0.45rem 1.2rem;
+  border-radius: 100px;
+  transition: transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn-touch-nav:hover {
