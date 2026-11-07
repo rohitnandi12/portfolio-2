@@ -216,7 +216,7 @@ body {
    DISTINCT SECTION FRAMING & SEPARATORS
    ========================================================================== */
 .section-card-frame {
-  background: var(--color-frame-bg);
+  background: transparent !important;
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   border: 1px solid var(--color-border);
@@ -1328,7 +1328,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: 4rem 1.5rem;
-    background: var(--color-frame-bg);
+    background: transparent !important;
     gap: 1.5rem;
     transition: right 0.3s ease;
     overflow-y: auto;
@@ -1404,4 +1404,11 @@ body {
   .nav-links {
     background: #000 !important;
   }
+}
+
+/* Ensure all sections are fully transparent and do not apply backdrop blur */
+.section-card-frame {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
